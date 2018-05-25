@@ -1,3 +1,6 @@
+
+'use strict';
+
 const express = require('express');
 const router = express.Router();
 
@@ -74,7 +77,7 @@ router.put('/:id', jsonParser, (req, res) => {
     name: req.body.name,
     ingredients: req.body.ingredients
   });
-  res.status(204).end();
+  res.status(200).json(updatedItem);
 })
 
 module.exports = router;
